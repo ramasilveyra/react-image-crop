@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import assign from 'object-assign';
 
 // Waiting for bug fix: https://github.com/yannickcr/eslint-plugin-react/issues/507
@@ -21,9 +22,9 @@ class ReactCrop extends Component {
     disabled: PropTypes.bool,
     ellipse: PropTypes.bool,
     crossorigin: PropTypes.string,
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.arrayOf(React.PropTypes.node),
-      React.PropTypes.node,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
     ]),
   }
 
@@ -98,7 +99,7 @@ class ReactCrop extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.crop) {
       let nextCrop = this.nextCropState(nextProps.crop);
-      const aspectRatioChanged = 
+      const aspectRatioChanged =
         this.state.crop.aspect && nextCrop.aspect !== this.state.crop.aspect;
 
       if (nextCrop.aspect) {

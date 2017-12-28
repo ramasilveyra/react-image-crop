@@ -40,12 +40,14 @@
     "eslint-plugin-jsx-a11y": "^3.0.1",
     "eslint-plugin-react": "^6.6.0",
     "node-sass": "^3.11.2",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "webpack": "^1.13.3"
   },
   "peerDependencies": {
-    "react": "^15.3.2",
+    "react": "^16.0.0",
+    "prop-types": "^15.6.0",
     "object-assign": "*"
   }
 }
